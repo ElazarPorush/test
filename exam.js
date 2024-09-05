@@ -313,3 +313,12 @@ const mission4 = (militaryUnit, firearm) => {
     firearms.push(firearm);
     return militaryUnit;
 }
+
+//   תרגיל מס 5
+const mission5 = (militaryUnit) => {
+    let sum = 0;
+    for (let i = 0; i < militaryUnit.trainingPrograms.length; i++){
+        sum += militaryUnit.trainingPrograms[i].duration;
+    }
+    return `Total duration of training programs: ${sum} weeks`;
+}
