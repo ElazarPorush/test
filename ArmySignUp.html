@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="ArmySignUp.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="title">
+            <div class="setting">
+                <a href="Army.html" style="color: white;"><h5>Home</h5></a>
+                <a href="Army.html" style="color: white;"><h5>Back To Schuedule</h5></a>
+            </div>
+        </div>
+        <h1>Survival Skills - Wilderness</h1>
+    </div>
+    <div class="container">
+        <div class="details">
+            <h2>Training Details</h2>
+            <p><big>Date:</big>: 2024-05-12</p>
+            <p><big>Instructor:</big>: sgl davis</p>
+            <p><big>Description:</big>: Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p><big>Duration:</big>: 2 hours</p>
+            <p><big>Equipment:</big>: Gloves</p>
+        </div>
+        <h1 style="color: rgb(6, 75, 6);">Sign Up For Survival Skills</h1>
+        <div class="form">
+            <form onsubmit="GetMassage()">
+                <label for="firstName">First Name:</label><br>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" style="width: 98%;" required><br>
+                <label for="lastName">Last Name:</label><br>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" style="width: 98%;" required><br>
+                <label for="ID">ID Number:</label><br>
+                <input type="number" id="id" name="ID" placeholder="Enter your ID number" min="0" max="100" value="0" style="width: 98%;" required><br>
+                <label for="rank">Rank:</label><br>
+                <select name="rank" id="rank" style="width: 98%; border-radius: 10px;">
+                    <option value="private">Private</option>
+                    <option value="public">Public</option>
+                </select>
+                <label for="gender">Gender:</label><br>
+                <input type="radio" id="male" name="gender" checked value="male">Male <br>
+                <input type="radio" id="female" name="gender" value="female">Female <br>
+                <input type="submit" value="Sign Up">
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Copyright @ 2020</p>
+    </div>
+    <script>
+        const GetMassage = () => {
+            const firstName = document.getElementById("firstName").value
+            const lastName = document.getElementById("lastName").value
+            const id = document.getElementById("id").value
+            const rank = document.getElementById("rank").value
+            const gender = document.querySelector('input[name="gender"]:checked').value
+            const message = `Name: ${firstName} ${lastName}\nID: ${id}\nRank: ${rank}\nGender: ${gender}`
+            alert(message)
+        }
+    </script>
+</body>
+
+</html>
