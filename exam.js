@@ -279,3 +279,14 @@ const mission1 = (militaryUnit) => {
     const dir = militaryUnit.commandStructure.chiefOfStaff;
     return `name: ${dir.name} rank: ${dir.rank} email: ${dir.contact.phone}`;
 }
+
+//   תרגיל מס 2
+const mission2 = (militaryUnit) => {
+    let sum = 0;
+    for (let i = 0; i < militaryUnit.personnel.length; i++) {
+        sum ++;
+    }
+    return `Amount of soldiers: ${sum}`;
+}
+
+//   תרגיל מס 3
