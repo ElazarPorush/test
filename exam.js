@@ -290,3 +290,11 @@ const mission2 = (militaryUnit) => {
 }
 
 //   תרגיל מס 3
+const mission3 = (militaryUnit, NewDeployment ) => {
+    militaryUnit.history.push({
+        eventDate: militaryUnit.currentDeployment.estimatedEndDate,
+        eventDescription: militaryUnit.currentDeployment.mission + " in " + militaryUnit.currentDeployment.location + "."
+    })
+    militaryUnit.currentDeployment = NewDeployment;
+    return militaryUnit;
+}
