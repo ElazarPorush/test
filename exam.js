@@ -291,10 +291,25 @@ const mission2 = (militaryUnit) => {
 
 //   תרגיל מס 3
 const mission3 = (militaryUnit, NewDeployment ) => {
-    militaryUnit.history.push({
+    militaryUnit.history.push(
+    {
         eventDate: militaryUnit.currentDeployment.estimatedEndDate,
         eventDescription: militaryUnit.currentDeployment.mission + " in " + militaryUnit.currentDeployment.location + "."
-    })
+    }
+)
     militaryUnit.currentDeployment = NewDeployment;
+    return militaryUnit;
+}
+
+//   תרגיל מס 4
+const mission4 = (militaryUnit, firearm) => {
+    const firearms = militaryUnit.equipment.firearms;
+    for (let i = 0; i < firearms.length; i++) {
+        if (firearms[i].type == firearm.type && firearms[i].status == firearm.status) {
+            firearms[i].quantity += 1;
+            return militaryUnit;
+        }
+    }
+    firearms.push(firearm);
     return militaryUnit;
 }
