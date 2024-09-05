@@ -306,7 +306,7 @@ const mission4 = (militaryUnit, firearm) => {
     const firearms = militaryUnit.equipment.firearms;
     for (let i = 0; i < firearms.length; i++) {
         if (firearms[i].type == firearm.type && firearms[i].status == firearm.status) {
-            firearms[i].quantity += 1;
+            firearms[i].quantity += firearm.quantity;
             return militaryUnit;
         }
     }
