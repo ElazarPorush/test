@@ -277,7 +277,7 @@ let militaryUnit = {
 //   תרגיל מס 1
 const mission1 = (militaryUnit) => {
     const dir = militaryUnit.commandStructure.chiefOfStaff;
-    return `name: ${dir.name} rank: ${dir.rank} email: ${dir.contact.phone}`;
+    return `name: ${dir.name} rank: ${dir.rank} phone: ${dir.contact.phone}`;
 }
 
 //   תרגיל מס 2
@@ -322,3 +322,5 @@ const mission5 = (militaryUnit) => {
     }
     return `Total duration of training programs: ${sum} weeks`;
 }
+
+module.exports = { mission1, mission2, mission3, mission4, mission5 };
